@@ -224,7 +224,268 @@
         .summary-label {
             font-size: 0.8rem;
         }
+    
+        /* Multi-select batch checkbox styles */
+        .batch-checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 8px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .batch-checkbox-label:hover {
+            border-color: var(--accent-orange);
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .batch-checkbox-label input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--secondary-green);
+            cursor: pointer;
+        }
+        .batch-checkbox-label .batch-name {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .batch-checkbox-label .batch-info {
+            color: #666;
+            font-size: 0.85rem;
+            margin-left: auto;
+        }
+        .batch-checkbox-label .batch-status {
+            color: #999;
+            font-size: 0.75rem;
+            font-style: italic;
+        }
+        #reportBatchCheckboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 5px;
+        }
+        .select-all-container {
+            background: linear-gradient(135deg, var(--secondary-green) 0%, var(--primary-green) 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .select-all-container label {
+            color: white !important;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+    
+        /* Year End Report Styles - Professional Mature Design */
+        #yearendPage {
+            font-size: 13px;
+        }
+
+        #yearendPage .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        #yearendPage .stats-grid {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        #yearendPage .stat-card {
+            padding: 15px;
+            border-left-width: 4px;
+        }
+
+        #yearendPage .stat-card.green {
+            border-left-color: #4caf50;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        }
+
+        #yearendPage .stat-card.red {
+            border-left-color: #f44336;
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+        }
+
+        #yearendPage .stat-card.blue {
+            border-left-color: #2196f3;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        }
+
+        #yearendPage .stat-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        #yearendPage .stat-value {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        #yearendPage .card {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        #yearendPage .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        #monthlyIncomeTable {
+            font-size: 0.8rem;
+        }
+
+        #monthlyIncomeTable th {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: white;
+            font-weight: 500;
+            padding: 10px 6px;
+            text-align: center;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        #monthlyIncomeTable td {
+            padding: 8px 6px;
+            text-align: right;
+            font-size: 0.8rem;
+        }
+
+        #monthlyIncomeTable td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        #monthlyIncomeTable tfoot {
+            background: #f5f5f5;
+            font-weight: 600;
+            border-top: 2px solid var(--primary-green);
+        }
+
+        #monthlyIncomeTable tfoot td {
+            color: var(--primary-green);
+            font-size: 0.85rem;
+        }
+
+        #expenseBreakdownBody td, #expenseBreakdownBody th {
+            font-size: 0.8rem;
+            padding: 8px;
+        }
+
+        /* Tax Summary - Compact Professional */
+        #taxSummarySection {
+            padding: 20px;
+        }
+
+        #taxSummarySection h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        #taxSummarySection .summary-grid {
+            gap: 15px;
+        }
+
+        #taxSummarySection .summary-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-medium);
+            transition: all 0.3s ease;
+        }
+
+        #taxSummarySection .summary-item:hover {
+            border-color: var(--accent-orange);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        #taxSummarySection .summary-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+        }
+
+        #taxSummarySection .summary-value {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        /* Balance Sheet - Compact */
+        #balanceSheetSection h4 {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        #balanceSheetSection td {
+            font-size: 0.8rem;
+            padding: 6px;
+        }
+
+        /* Print Styles for Year End Report */
+        @media print {
+            .sidebar, .header-actions, .batch-selector button, .nav-item {
+                display: none !important;
+            }
+
+            .main-content {
+                margin-left: 0 !important;
+                padding: 15px !important;
+            }
+
+            #yearendPage {
+                font-size: 11px;
+            }
+
+            #yearendPage .page-section {
+                display: block !important;
+            }
+
+            #yearendPage .card, #yearendPage .summary-section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            #monthlyIncomeTable {
+                font-size: 0.75rem;
+            }
+
+            #monthlyIncomeTable th, #monthlyIncomeTable td {
+                padding: 6px 4px;
+            }
+
+            body {
+                background: white;
+            }
+
+            .stat-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                padding: 12px;
+            }
+
+            .stat-value {
+                font-size: 1.2rem !important;
+            }
+        }
+
     </style>
+<base target="_blank">
 <base target="_blank">
 <base target="_blank">
 </head>
@@ -287,6 +548,7 @@
                 </div>
                 <div class="nav-item" onclick="showPage('salary')" data-page="salary" id="navSalary"><span>👥</span> Salary</div>
                 <div class="nav-item" onclick="showPage('reports')" data-page="reports" id="navReports"><span>📈</span> Reports</div>
+                <div class="nav-item" onclick="showPage('yearend')" data-page="yearend" id="navYearEnd"><span>📊</span> Year End Report</div>
                 <div class="nav-item" onclick="showPage('users')" data-page="users" id="navUsers" style="display: none;"><span>⚙️</span> User Management</div>
                 <div class="nav-item" onclick="logout()"><span>🚪</span> Logout</div>
             </nav>
@@ -524,10 +786,22 @@
                     <div class="header-actions"><button class="btn btn-success" onclick="exportFullReport()">📊 Export Full Report</button></div>
                 </div>
                 <div class="batch-selector">
-                    <h3>Select Batch for Detailed Report</h3>
-                    <select id="reportBatchSelect" onchange="generateBatchReport()" style="width: 100%; padding: 12px; border-radius: 8px; border: none; font-size: 16px;">
-                        <option value="">-- Select a Batch --</option>
-                    </select>
+                    <h3>Select Batch(es) for Detailed Report</h3>
+                    <div style="background: white; padding: 15px; border-radius: 8px; max-height: 200px; overflow-y: auto;">
+                        <div style="margin-bottom: 10px;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 600; color: var(--primary-green);">
+                                <input type="checkbox" id="selectAllBatches" onchange="toggleAllBatches()" style="width: 18px; height: 18px;">
+                                Select All Batches
+                            </label>
+                        </div>
+                        <div id="reportBatchCheckboxes" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;">
+                            <!-- Batch checkboxes will be populated here -->
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <button class="btn btn-success" onclick="generateBatchReport()">📊 Generate Report</button>
+                        <button class="btn btn-secondary" onclick="clearBatchSelection()">Clear Selection</button>
+                    </div>
                 </div>
                 <div class="summary-section" id="batchSummary" style="display: none;">
                     <h3 style="color: var(--primary-green); margin-bottom: 20px;">Batch Performance Summary</h3>
@@ -554,6 +828,220 @@
                     <div class="card-header"><span class="card-title">Balance Sheet</span></div>
                     <div class="table-container">
                         <table><thead><tr><th>Assets</th><th>Amount (₦)</th><th>Liabilities & Equity</th><th>Amount (₦)</th></tr></thead><tbody id="balanceSheetTable"></tbody></table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year End Report Page -->
+            <div class="page-section" id="yearendPage">
+                <div class="header">
+                    <h1>Year End Financial Report</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-success" onclick="exportYearEndReport()">📥 Export to Excel</button>
+                        <button class="btn btn-secondary" onclick="printYearEndReport()">🖨️ Print</button>
+                    </div>
+                </div>
+
+                <div class="batch-selector">
+                    <h3>Select Financial Year</h3>
+                    <div class="form-row" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Year *</label>
+                            <select id="yearEndYear" onchange="generateYearEndReport()" style="width: 100%; padding: 12px; border-radius: 8px; border: none; font-size: 16px;">
+<option value="">-- Select Year --</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2033">2033</option>
+                                <option value="2034">2034</option>
+                                <option value="2035">2035</option>
+                                <option value="2036">2036</option>
+                                <option value="2037">2037</option>
+                                <option value="2038">2038</option>
+                                <option value="2039">2039</option>
+                                <option value="2040">2040</option>
+                                <option value="2041">2041</option>
+                                <option value="2042">2042</option>
+                                <option value="2043">2043</option>
+                                <option value="2044">2044</option>
+                                <option value="2045">2045</option>
+                                <option value="2046">2046</option>
+                                <option value="2047">2047</option>
+                                <option value="2048">2048</option>
+                                <option value="2049">2049</option>
+                                <option value="2050">2050</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0; display: flex; align-items: flex-end;">
+                            <button class="btn btn-success" onclick="generateYearEndReport()" style="width: 100%; height: 46px;">📊 Generate Report</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Annual Summary Cards -->
+                <div class="stats-grid" id="annualSummaryCards" style="display: none;">
+                    <div class="stat-card green">
+                        <div class="stat-label">Total Revenue</div>
+                        <div class="stat-value currency" id="annualRevenue">₦0.00</div>
+                    </div>
+                    <div class="stat-card red">
+                        <div class="stat-label">Total Expenses</div>
+                        <div class="stat-value currency" id="annualExpenses">₦0.00</div>
+                    </div>
+                    <div class="stat-card orange">
+                        <div class="stat-label">Total Salaries</div>
+                        <div class="stat-value currency" id="annualSalaries">₦0.00</div>
+                    </div>
+                    <div class="stat-card blue">
+                        <div class="stat-label">Net Profit/Loss</div>
+                        <div class="stat-value currency" id="annualNetProfit">₦0.00</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Total Birds Sold</div>
+                        <div class="stat-value" id="annualBirdsSold">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Total Feed Cost</div>
+                        <div class="stat-value currency" id="annualFeedCost">₦0.00</div>
+                    </div>
+                </div>
+
+                <!-- Monthly Income Statement -->
+                <div class="card" id="monthlyIncomeSection" style="display: none;">
+                    <div class="card-header">
+                        <span class="card-title">Monthly Income Statement</span>
+                        <span style="color: #666; font-size: 0.9rem;">Tax Filing Document</span>
+                    </div>
+                    <div class="table-container">
+                        <table id="monthlyIncomeTable">
+                            <thead>
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Revenue (₦)</th>
+                                    <th>Cost of Goods Sold (₦)</th>
+                                    <th>Gross Profit (₦)</th>
+                                    <th>Operating Expenses (₦)</th>
+                                    <th>Salaries (₦)</th>
+                                    <th>Net Income/Loss (₦)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="monthlyIncomeBody">
+                            </tbody>
+                            <tfoot style="background: #f5f5f5; font-weight: bold;">
+                                <tr>
+                                    <td>YEAR TOTAL</td>
+                                    <td id="totalRevenue">₦0.00</td>
+                                    <td id="totalCOGS">₦0.00</td>
+                                    <td id="totalGrossProfit">₦0.00</td>
+                                    <td id="totalOpEx">₦0.00</td>
+                                    <td id="totalSalariesFooter">₦0.00</td>
+                                    <td id="totalNetIncome">₦0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Detailed Expense Breakdown -->
+                <div class="card" id="expenseDetailSection" style="display: none;">
+                    <div class="card-header">
+                        <span class="card-title">Detailed Expense Breakdown by Category</span>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Expense Category</th>
+                                    <th>Q1 (Jan-Mar)</th>
+                                    <th>Q2 (Apr-Jun)</th>
+                                    <th>Q3 (Jul-Sep)</th>
+                                    <th>Q4 (Oct-Dec)</th>
+                                    <th>Annual Total (₦)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="expenseBreakdownBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tax Summary Section -->
+                <div class="summary-section" id="taxSummarySection" style="display: none;">
+                    <h3 style="color: var(--primary-green); margin-bottom: 20px;">Tax Filing Summary</h3>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-label">Gross Revenue</div>
+                            <div class="summary-value" id="taxRevenue">₦0.00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Deductible Expenses</div>
+                            <div class="summary-value" id="taxDeductible">₦0.00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Taxable Income</div>
+                            <div class="summary-value" id="taxableIncome">₦0.00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Estimated Tax (30%)</div>
+                            <div class="summary-value" id="estimatedTax">₦0.00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Total Birds Sold</div>
+                            <div class="summary-value" id="taxBirdsSold">0</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Total Weight Sold</div>
+                            <div class="summary-value" id="taxWeightSold">0 kg</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Average Cost per Bird</div>
+                            <div class="summary-value" id="taxCostPerBird">₦0.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Balance Sheet Summary -->
+                <div class="card" id="balanceSheetSection" style="display: none;">
+                    <div class="card-header">
+                        <span class="card-title">Year End Balance Sheet Summary</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                        <div>
+                            <h4 style="color: var(--primary-green); margin-bottom: 15px; border-bottom: 2px solid var(--secondary-green); padding-bottom: 10px;">ASSETS</h4>
+                            <table style="width: 100%;">
+                                <tr><td style="padding: 8px;">Current Assets</td><td style="text-align: right; font-weight: 600;" id="assetsCurrent">₦0.00</td></tr>
+                                <tr><td style="padding: 8px; padding-left: 20px; color: #666;">Cash & Bank</td><td style="text-align: right;" id="assetsCash">₦0.00</td></tr>
+                                <tr><td style="padding: 8px; padding-left: 20px; color: #666;">Livestock Inventory</td><td style="text-align: right;" id="assetsLivestock">₦0.00</td></tr>
+                                <tr><td style="padding: 8px; padding-left: 20px; color: #666;">Feed Stock</td><td style="text-align: right;" id="assetsFeed">₦0.00</td></tr>
+                                <tr><td style="padding: 8px;">Fixed Assets</td><td style="text-align: right; font-weight: 600;" id="assetsFixed">₦0.00</td></tr>
+                                <tr style="background: #e8f5e9; font-weight: bold;"><td style="padding: 10px;">TOTAL ASSETS</td><td style="text-align: right;" id="assetsTotal">₦0.00</td></tr>
+                            </table>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--danger-red); margin-bottom: 15px; border-bottom: 2px solid var(--danger-red); padding-bottom: 10px;">LIABILITIES & EQUITY</h4>
+                            <table style="width: 100%;">
+                                <tr><td style="padding: 8px;">Current Liabilities</td><td style="text-align: right; font-weight: 600;" id="liabilitiesCurrent">₦0.00</td></tr>
+                                <tr><td style="padding: 8px; padding-left: 20px; color: #666;">Accounts Payable</td><td style="text-align: right;">₦0.00</td></tr>
+                                <tr><td style="padding: 8px;">Long-term Liabilities</td><td style="text-align: right; font-weight: 600;">₦0.00</td></tr>
+                                <tr style="background: #ffebee; font-weight: bold;"><td style="padding: 10px;">TOTAL LIABILITIES</td><td style="text-align: right;" id="liabilitiesTotal">₦0.00</td></tr>
+                                <tr><td colspan="2" style="height: 10px;"></td></tr>
+                                <tr><td style="padding: 8px;">Owner's Equity</td><td style="text-align: right; font-weight: 600;" id="equityTotal">₦0.00</td></tr>
+                                <tr><td style="padding: 8px; padding-left: 20px; color: #666;">Retained Earnings</td><td style="text-align: right;" id="equityRetained">₦0.00</td></tr>
+                                <tr style="background: #e3f2fd; font-weight: bold;"><td style="padding: 10px;">TOTAL L + E</td><td style="text-align: right;" id="liabilitiesEquityTotal">₦0.00</td></tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -686,6 +1174,7 @@
                     <div class="form-group"><label>Date *</label><input type="date" id="expenseDate"></div>
                     <div class="form-group"><label>Category *</label><select id="expenseCategory">
                                 <option value="Feed">Feed</option>
+                                <option value="DOC">DOC (Day Old Chicks)</option>
                                 <option value="Medication">Medication</option>
                                 <option value="Vaccination">Vaccination</option>
                                 <option value="Utilities">Utilities</option>
@@ -1060,6 +1549,16 @@
                 case 'weeklyweight': loadWeeklyWeightData(); break;
                 case 'monthlybalance': generateMonthlyBalanceSheet(); break;
                 case 'users': if (currentUser.role === 'admin') loadUsers(); break;
+                case 'yearend': loadYearEndReport(); break;
+            }
+        }
+
+        function loadYearEndReport() {
+            // Set current year as default
+            const currentYear = new Date().getFullYear();
+            const yearSelect = document.getElementById('yearEndYear');
+            if (yearSelect && !yearSelect.value) {
+                yearSelect.value = currentYear;
             }
         }
 
@@ -1805,66 +2304,141 @@
 
         // Reports Functions
         function loadReports() {
-            updateBatchSelect('reportBatchSelect');
+            populateBatchCheckboxes();
+        }
+
+        function populateBatchCheckboxes() {
+            const container = document.getElementById('reportBatchCheckboxes');
+            const showInactive = document.getElementById('showInactiveBatches')?.checked || false;
+
+            const batches = db.batches.filter(b => showInactive || b.status === 'active');
+
+            if (batches.length === 0) {
+                container.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">No batches available. Please create a batch first.</div>';
+                return;
+            }
+
+            container.innerHTML = batches.map(b => `
+                <label class="batch-checkbox-label">
+                    <input type="checkbox" class="batch-checkbox" value="${b.id}">
+                    <span class="batch-name">${b.name}</span>
+                    <span class="batch-info">(${getCurrentBirds(b.id).toLocaleString()} birds)</span>
+                    ${b.status === 'inactive' ? '<span class="batch-status">[INACTIVE]</span>' : ''}
+                </label>
+            `).join('');
+        }
+
+        function toggleAllBatches() {
+            const selectAll = document.getElementById('selectAllBatches');
+            const checkboxes = document.querySelectorAll('.batch-checkbox');
+            checkboxes.forEach(cb => cb.checked = selectAll.checked);
+        }
+
+        function clearBatchSelection() {
+            document.getElementById('selectAllBatches').checked = false;
+            document.querySelectorAll('.batch-checkbox').forEach(cb => cb.checked = false);
+            document.getElementById('batchSummary').style.display = 'none';
+        }
+
+        function getSelectedBatches() {
+            const checkboxes = document.querySelectorAll('.batch-checkbox:checked');
+            return Array.from(checkboxes).map(cb => cb.value);
         }
 
         function generateBatchReport() {
-            const batchId = document.getElementById('reportBatchSelect').value;
-            if (!batchId) {
+            const selectedBatches = getSelectedBatches();
+            if (selectedBatches.length === 0) {
+                alert('Please select at least one batch to generate the report');
                 document.getElementById('batchSummary').style.display = 'none';
                 return;
             }
 
-            const batch = db.batches.find(b => b.id === batchId);
-            if (!batch) return;
+            // Aggregate data across all selected batches
+            let totalInitialBirds = 0, totalMortality = 0, totalBirdsSold = 0, totalSales = 0;
+            let totalExpenses = 0, totalSalaryExpenses = 0, totalFeedConsumed = 0;
+            let totalWeightSold = 0, totalCurrentStock = 0;
+            let totalFeedKg = 0, totalWeightKg = 0;
 
-            const mortality = db.mortality.filter(m => m.batchId === batchId).reduce((sum, m) => sum + m.day + m.evening, 0);
-            const sales = db.sales.filter(s => s.batchId === batchId);
-            const birdsSold = sales.reduce((sum, s) => sum + s.quantity, 0);
-            const totalSales = sales.reduce((sum, s) => sum + s.totalAmount, 0);
-            const expenses = db.expenses.filter(e => e.batchId === batchId).reduce((sum, e) => sum + e.amount, 0);
-            const salaryExpenses = db.salaries.filter(s => s.batchId === batchId).reduce((sum, s) => sum + s.amount, 0);
-            const totalExpenses = expenses + salaryExpenses;
-            const feedConsumed = db.feeds.filter(f => f.batchId === batchId).reduce((sum, f) => sum + f.bagsConsumed, 0);
+            selectedBatches.forEach(batchId => {
+                const batch = db.batches.find(b => b.id === batchId);
+                if (!batch) return;
 
-            const currentStock = batch.initialBirds - mortality - birdsSold;
-            const netProfit = totalSales - totalExpenses;
-            const fcrData = calculateBatchFCR(batchId); const fcr = fcrData.fcr;
+                const mortality = db.mortality.filter(m => m.batchId === batchId).reduce((sum, m) => sum + m.day + m.evening, 0);
+                const sales = db.sales.filter(s => s.batchId === batchId);
+                const birdsSold = sales.reduce((sum, s) => sum + s.quantity, 0);
+                const batchSales = sales.reduce((sum, s) => sum + s.totalAmount, 0);
+                const expenses = db.expenses.filter(e => e.batchId === batchId).reduce((sum, e) => sum + e.amount, 0);
+                const salaryExpenses = db.salaries.filter(s => s.batchId === batchId).reduce((sum, s) => sum + s.amount, 0);
+                const feedConsumed = db.feeds.filter(f => f.batchId === batchId).reduce((sum, f) => sum + f.bagsConsumed, 0);
 
-            // Calculate weight statistics
-            const totalWeightSold = sales.reduce((sum, s) => sum + s.weight, 0);
-            const avgWeightSold = birdsSold > 0 ? (totalWeightSold / birdsSold).toFixed(2) : '0.00';
+                const weightSold = sales.reduce((sum, s) => sum + s.weight, 0);
+                const currentStock = batch.initialBirds - mortality - birdsSold;
 
-            document.getElementById('summaryInitialBirds').textContent = batch.initialBirds;
-            document.getElementById('summaryBirdsSold').textContent = birdsSold;
-            document.getElementById('summaryMortality').textContent = mortality;
-            document.getElementById('summaryCurrentStock').textContent = currentStock;
+                // For FCR calculation
+                const feedKg = db.feeds.filter(f => f.batchId === batchId).reduce((sum, f) => sum + (f.bagsConsumed * 25), 0);
+
+                totalInitialBirds += batch.initialBirds;
+                totalMortality += mortality;
+                totalBirdsSold += birdsSold;
+                totalSales += batchSales;
+                totalExpenses += expenses;
+                totalSalaryExpenses += salaryExpenses;
+                totalFeedConsumed += feedConsumed;
+                totalWeightSold += weightSold;
+                totalCurrentStock += currentStock;
+                totalFeedKg += feedKg;
+                totalWeightKg += weightSold;
+            });
+
+            const grandTotalExpenses = totalExpenses + totalSalaryExpenses;
+            const netProfit = totalSales - grandTotalExpenses;
+            const fcr = totalWeightKg > 0 ? (totalFeedKg / totalWeightKg).toFixed(2) : '0.00';
+            const avgWeightSold = totalBirdsSold > 0 ? (totalWeightSold / totalBirdsSold).toFixed(2) : '0.00';
+
+            // Update header to show number of batches selected
+            const batchText = selectedBatches.length === 1 ? '1 Batch Selected' : `${selectedBatches.length} Batches Selected`;
+
+            document.getElementById('summaryInitialBirds').textContent = totalInitialBirds.toLocaleString();
+            document.getElementById('summaryBirdsSold').textContent = totalBirdsSold.toLocaleString();
+            document.getElementById('summaryMortality').textContent = totalMortality.toLocaleString();
+            document.getElementById('summaryCurrentStock').textContent = totalCurrentStock.toLocaleString();
             document.getElementById('summaryTotalSales').textContent = '₦' + totalSales.toLocaleString();
-            document.getElementById('summaryTotalExpenses').textContent = '₦' + totalExpenses.toLocaleString();
+            document.getElementById('summaryTotalExpenses').textContent = '₦' + grandTotalExpenses.toLocaleString();
             document.getElementById('summaryNetProfit').textContent = '₦' + netProfit.toLocaleString();
             document.getElementById('summaryNetProfit').className = 'summary-value ' + (netProfit >= 0 ? 'positive' : 'negative');
             document.getElementById('summaryFCR').textContent = fcr;
-            document.getElementById('summaryTotalWeightSold').textContent = totalWeightSold + ' kg';
+            document.getElementById('summaryTotalWeightSold').textContent = Math.round(totalWeightSold).toLocaleString() + ' kg';
             document.getElementById('summaryAvgWeightSold').textContent = avgWeightSold + ' kg';
+
+            // Update the summary section header
+            const summaryHeader = document.querySelector('#batchSummary h3');
+            if (summaryHeader) {
+                summaryHeader.textContent = `Batch Performance Summary (${batchText})`;
+            }
+
             document.getElementById('batchSummary').style.display = 'block';
 
             // Income Statement
             const incomeTbody = document.getElementById('incomeStatementTable');
 
-            // Calculate expense breakdown
-            const feedCosts = db.expenses.filter(e => e.batchId === batchId && e.category === 'Feed').reduce((s, e) => s + e.amount, 0);
-            const medicationCosts = db.expenses.filter(e => e.batchId === batchId && e.category === 'Medication').reduce((s, e) => s + e.amount, 0);
-            const depreciationCosts = db.expenses.filter(e => e.batchId === batchId && e.category === 'Depreciation').reduce((s, e) => s + e.amount, 0);
-            const fuelingCosts = db.expenses.filter(e => e.batchId === batchId && e.category === 'Fueling').reduce((s, e) => s + e.amount, 0);
-            const electricityCosts = db.expenses.filter(e => e.batchId === batchId && e.category === 'Electricity').reduce((s, e) => s + e.amount, 0);
-            const charcoalCosts = db.expenses.filter(e => e.batchId === batchId && e.category === 'Charcoal').reduce((s, e) => s + e.amount, 0);
-            const otherExpenseCosts = db.expenses.filter(e => e.batchId === batchId && !['Feed', 'Medication', 'Depreciation', 'Fueling', 'Electricity', 'Charcoal'].includes(e.category)).reduce((s, e) => s + e.amount, 0);
+            // Calculate expense breakdown across all selected batches
+            let feedCosts = 0, docCosts = 0, medicationCosts = 0, depreciationCosts = 0, fuelingCosts = 0;
+            let electricityCosts = 0, charcoalCosts = 0, otherExpenseCosts = 0, salaryCosts = 0;
 
-            // Calculate salary costs for this batch
-            const salaryCosts = db.salaries.filter(s => s.batchId === batchId).reduce((sum, s) => sum + s.amount, 0);
+            selectedBatches.forEach(batchId => {
+                feedCosts += db.expenses.filter(e => e.batchId === batchId && e.category === 'Feed').reduce((s, e) => s + e.amount, 0);
+                docCosts += db.expenses.filter(e => e.batchId === batchId && e.category === 'DOC').reduce((s, e) => s + e.amount, 0);
+                medicationCosts += db.expenses.filter(e => e.batchId === batchId && e.category === 'Medication').reduce((s, e) => s + e.amount, 0);
+                depreciationCosts += db.expenses.filter(e => e.batchId === batchId && e.category === 'Depreciation').reduce((s, e) => s + e.amount, 0);
+                fuelingCosts += db.expenses.filter(e => e.batchId === batchId && e.category === 'Fueling').reduce((s, e) => s + e.amount, 0);
+                electricityCosts += db.expenses.filter(e => e.batchId === batchId && e.category === 'Electricity').reduce((s, e) => s + e.amount, 0);
+                charcoalCosts += db.expenses.filter(e => e.batchId === batchId && e.category === 'Charcoal').reduce((s, e) => s + e.amount, 0);
+                otherExpenseCosts += db.expenses.filter(e => e.batchId === batchId && !['Feed', 'DOC', 'Medication', 'Depreciation', 'Fueling', 'Electricity', 'Charcoal'].includes(e.category)).reduce((s, e) => s + e.amount, 0);
+                salaryCosts += db.salaries.filter(s => s.batchId === batchId).reduce((sum, s) => sum + s.amount, 0);
+            });
 
             // Total expenses including salaries
-            const totalExpensesWithSalaries = expenses + salaryCosts;
+            const totalExpensesWithSalaries = totalExpenses + totalSalaryExpenses;
             const netProfitWithSalaries = totalSales - totalExpensesWithSalaries;
 
             incomeTbody.innerHTML = `
@@ -1874,6 +2448,7 @@
                 <tr><td colspan="2"></td></tr>
                 <tr><td><strong>EXPENSES</strong></td><td></td></tr>
                 <tr><td style="padding-left: 30px;">Feed Costs</td><td>₦${feedCosts.toLocaleString()}</td></tr>
+                <tr><td style="padding-left: 30px;">DOC (Day Old Chicks)</td><td>₦${docCosts.toLocaleString()}</td></tr>
                 <tr><td style="padding-left: 30px;">Medication</td><td>₦${medicationCosts.toLocaleString()}</td></tr>
                 <tr><td style="padding-left: 30px;">Depreciation</td><td>₦${depreciationCosts.toLocaleString()}</td></tr>
                 <tr><td style="padding-left: 30px;">Fueling</td><td>₦${fuelingCosts.toLocaleString()}</td></tr>
@@ -1888,18 +2463,21 @@
 
             // Balance Sheet
             const balanceTbody = document.getElementById('balanceSheetTable');
-            const currentAssets = currentStock * (totalSales / (birdsSold || 1));
+            const currentAssets = totalCurrentStock * (totalSales / (totalBirdsSold || 1)) || 0;
+            const feedStockValue = (db.feedStock['Super Starter'] + db.feedStock['Starter'] + db.feedStock['Finisher']) * 15000;
+            const totalAssets = currentAssets + feedStockValue;
+
             balanceTbody.innerHTML = `
                 <tr><td><strong>Current Assets</strong></td><td></td><td><strong>Liabilities</strong></td><td></td></tr>
                 <tr><td style="padding-left: 30px;">Livestock (Birds)</td><td>₦${currentAssets.toLocaleString()}</td><td style="padding-left: 30px;">Accounts Payable</td><td>₦0</td></tr>
-                <tr><td style="padding-left: 30px;">Feed Stock</td><td>₦${((db.feedStock['Super Starter'] + db.feedStock['Starter'] + db.feedStock['Finisher']) * 15000).toLocaleString()}</td><td style="padding-left: 30px;">Other Liabilities</td><td>₦0</td></tr>
-                <tr style="background: #f5f5f5;"><td><strong>Total Assets</strong></td><td><strong>₦${(currentAssets + (db.feedStock['Super Starter'] + db.feedStock['Starter'] + db.feedStock['Finisher']) * 15000).toLocaleString()}</strong></td><td><strong>Total Liabilities</strong></td><td><strong>₦0</strong></td></tr>
+                <tr><td style="padding-left: 30px;">Feed Stock</td><td>₦${feedStockValue.toLocaleString()}</td><td style="padding-left: 30px;">Other Liabilities</td><td>₦0</td></tr>
+                <tr style="background: #f5f5f5;"><td><strong>Total Assets</strong></td><td><strong>₦${totalAssets.toLocaleString()}</strong></td><td><strong>Total Liabilities</strong></td><td><strong>₦0</strong></td></tr>
                 <tr><td></td><td></td><td><strong>Equity</strong></td><td></td></tr>
                 <tr><td></td><td></td><td style="padding-left: 30px;">Retained Earnings</td><td>₦${netProfit.toLocaleString()}</td></tr>
             `;
         }
 
-        // User Management
+// User Management
         function loadUsers() {
             const tbody = document.getElementById('usersTable');
             tbody.innerHTML = db.users.map(u => `
@@ -2187,11 +2765,23 @@
             records.sort((a, b) => a.week - b.week);
 
             // Calculate cumulative FCR for each record
+            // FCR = Total Feed Consumed (kg) / Total Body Weight (kg)
+            const batch = db.batches.find(b => b.id === batchId);
+            const currentBirds = batch ? getCurrentBirds(batch.id) : 0;
+
             records = records.map((record, index) => {
-                const cumulativeFeed = records.slice(0, index + 1).reduce((sum, r) => sum + r.feedConsumed, 0);
-                const cumulativeWeight = record.avgWeight * getCurrentBirds(record.batchId);
-                const fcr = cumulativeWeight > 0 ? (cumulativeFeed / cumulativeWeight).toFixed(2) : '0.00';
-                return { ...record, cumulativeFCR: fcr, cumulativeFeed };
+                // Calculate cumulative feed consumed up to this week
+                const cumulativeFeed = records.slice(0, index + 1).reduce((sum, r) => sum + (parseFloat(r.feedConsumed) || 0), 0);
+
+                // Calculate total bird weight: average weight * number of birds
+                // Use sample size if available, otherwise use current birds in batch
+                const birdCount = parseInt(record.sampleSize) || currentBirds || 1;
+                const totalBirdWeight = parseFloat(record.avgWeight) * birdCount;
+
+                // FCR = Feed Input / Weight Output
+                const fcr = totalBirdWeight > 0 ? (cumulativeFeed / totalBirdWeight).toFixed(2) : '0.00';
+
+                return { ...record, cumulativeFCR: fcr, cumulativeFeed: cumulativeFeed.toFixed(2) };
             });
 
             tbody.innerHTML = records.map(w => {
@@ -2241,14 +2831,15 @@
         }
 
         function calculateWeeklyFeed(batchId, weekStartDate, weekEndDate) {
-            // Calculate total feed consumed in the date range
+            // Calculate total feed consumed in the date range (in kg)
             const weekFeeds = db.feeds.filter(f => {
                 return f.batchId === batchId && 
                        f.date >= weekStartDate && 
                        f.date <= weekEndDate;
             });
-            // Each bag is 25kg
-            return weekFeeds.reduce((sum, f) => sum + (f.bagsConsumed * 25), 0);
+            // Each bag is 25kg - convert bags to kg
+            const totalBags = weekFeeds.reduce((sum, f) => sum + f.bagsConsumed, 0);
+            return totalBags * 25;
         }
 
         function saveWeeklyWeight() {
@@ -2265,10 +2856,14 @@
                 return;
             }
 
-            // Calculate feed consumed for this week
+            // Calculate feed consumed for this week (in kg)
             const weekStart = new Date(date);
             weekStart.setDate(weekStart.getDate() - 6); // Week ending on the date selected
             const feedConsumed = calculateWeeklyFeed(batchId, weekStart.toISOString().split('T')[0], date);
+
+            // Update the display field
+            const feedInput = document.getElementById('weeklyWeightFeed');
+            if (feedInput) feedInput.value = feedConsumed;
 
             const batch = db.batches.find(b => b.id === batchId);
 
@@ -2594,6 +3189,372 @@
         }
 
         function printMonthlyBalance() { window.print(); }
+
+    // Year End Report Functions
+    function generateYearEndReport() {
+        const year = document.getElementById('yearEndYear').value;
+        if (!year) {
+            alert('Please select a year to generate the report');
+            return;
+        }
+
+        const yearStart = `${year}-01-01`;
+        const yearEnd = `${year}-12-31`;
+
+        // Filter data for the selected year
+        const yearSales = db.sales.filter(s => s.date >= yearStart && s.date <= yearEnd);
+        const yearExpenses = db.expenses.filter(e => e.date >= yearStart && e.date <= yearEnd);
+        const yearSalaries = db.salaries.filter(s => s.date >= yearStart && s.date <= yearEnd);
+        const yearFeeds = db.feeds.filter(f => f.date >= yearStart && f.date <= yearEnd);
+
+        // Calculate annual totals
+        const totalRevenue = yearSales.reduce((sum, s) => sum + s.totalAmount, 0);
+        const totalExpenses = yearExpenses.reduce((sum, e) => sum + e.amount, 0);
+        const totalSalaries = yearSalaries.reduce((sum, s) => sum + s.amount, 0);
+        const totalFeedCost = yearExpenses.filter(e => e.category === 'Feed').reduce((sum, e) => sum + e.amount, 0);
+        const totalBirdsSold = yearSales.reduce((sum, s) => sum + s.quantity, 0);
+        const netProfit = totalRevenue - totalExpenses - totalSalaries;
+
+        // Update summary cards
+        document.getElementById('annualRevenue').textContent = '₦' + totalRevenue.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('annualExpenses').textContent = '₦' + totalExpenses.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('annualSalaries').textContent = '₦' + totalSalaries.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('annualNetProfit').textContent = '₦' + netProfit.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('annualNetProfit').className = 'stat-value currency ' + (netProfit >= 0 ? '' : 'negative');
+        document.getElementById('annualBirdsSold').textContent = totalBirdsSold.toLocaleString();
+        document.getElementById('annualFeedCost').textContent = '₦' + totalFeedCost.toLocaleString('en-US', {minimumFractionDigits: 2});
+
+        // Show summary cards
+        document.getElementById('annualSummaryCards').style.display = 'grid';
+
+        // Generate monthly breakdown
+        generateMonthlyBreakdown(year, yearSales, yearExpenses, yearSalaries, yearFeeds);
+
+        // Generate expense breakdown
+        generateExpenseBreakdown(year, yearExpenses);
+
+        // Generate tax summary
+        generateTaxSummary(totalRevenue, totalExpenses, totalSalaries, totalBirdsSold, netProfit, yearSales);
+
+        // Generate balance sheet
+        generateYearEndBalanceSheet(netProfit);
+
+        // Show all sections
+        document.getElementById('monthlyIncomeSection').style.display = 'block';
+        document.getElementById('expenseDetailSection').style.display = 'block';
+        document.getElementById('taxSummarySection').style.display = 'block';
+        document.getElementById('balanceSheetSection').style.display = 'block';
+
+        logActivity('Year End Report', `Generated year end report for ${year}`);
+    }
+
+    function generateMonthlyBreakdown(year, sales, expenses, salaries, feeds) {
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const tbody = document.getElementById('monthlyIncomeBody');
+        let html = '';
+
+        let annualRevenue = 0, annualCOGS = 0, annualGross = 0, annualOpEx = 0, annualSal = 0, annualNet = 0;
+
+        months.forEach((month, index) => {
+            const monthNum = String(index + 1).padStart(2, '0');
+            const monthStart = `${year}-${monthNum}-01`;
+            const monthEnd = new Date(year, index + 1, 0).toISOString().split('T')[0];
+
+            // Filter data for this month
+            const monthSales = sales.filter(s => s.date >= monthStart && s.date <= monthEnd);
+            const monthExpenses = expenses.filter(e => e.date >= monthStart && e.date <= monthEnd);
+            const monthSalaries = salaries.filter(s => s.date >= monthStart && s.date <= monthEnd);
+            const monthFeeds = feeds.filter(f => f.date >= monthStart && f.date <= monthEnd);
+
+            // Calculate monthly values
+            const revenue = monthSales.reduce((sum, s) => sum + s.totalAmount, 0);
+            const cogs = monthExpenses.filter(e => ['Feed', 'DOC', 'Medication', 'Vaccination'].includes(e.category)).reduce((sum, e) => sum + e.amount, 0);
+            const grossProfit = revenue - cogs;
+            const opEx = monthExpenses.filter(e => !['Feed', 'Medication', 'Vaccination'].includes(e.category)).reduce((sum, e) => sum + e.amount, 0);
+            const monthSal = monthSalaries.reduce((sum, s) => sum + s.amount, 0);
+            const netIncome = grossProfit - opEx - monthSal;
+
+            // Accumulate annual totals
+            annualRevenue += revenue;
+            annualCOGS += cogs;
+            annualGross += grossProfit;
+            annualOpEx += opEx;
+            annualSal += monthSal;
+            annualNet += netIncome;
+
+            // Determine status
+            let statusBadge = '';
+            if (netIncome > 0) {
+                statusBadge = '<span class="badge badge-success">Profit</span>';
+            } else if (netIncome < 0) {
+                statusBadge = '<span class="badge badge-danger">Loss</span>';
+            } else {
+                statusBadge = '<span class="badge badge-warning">Break-even</span>';
+            }
+
+            html += `<tr style="${netIncome < 0 ? 'background: #ffebee;' : ''}">
+                <td><strong>${month}</strong></td>
+                <td>₦${revenue.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+                <td>₦${cogs.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+                <td style="${grossProfit < 0 ? 'color: #d32f2f;' : 'color: #388e3c;'}">₦${grossProfit.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+                <td>₦${opEx.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+                <td>₦${monthSal.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+                <td style="font-weight: bold; ${netIncome < 0 ? 'color: #d32f2f;' : 'color: #388e3c;'}">₦${netIncome.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+                <td>${statusBadge}</td>
+            </tr>`;
+        });
+
+        tbody.innerHTML = html;
+
+        // Update footer totals
+        document.getElementById('totalRevenue').textContent = '₦' + annualRevenue.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('totalCOGS').textContent = '₦' + annualCOGS.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('totalGrossProfit').textContent = '₦' + annualGross.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('totalGrossProfit').style.color = annualGross < 0 ? '#d32f2f' : '#388e3c';
+        document.getElementById('totalOpEx').textContent = '₦' + annualOpEx.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('totalSalariesFooter').textContent = '₦' + annualSal.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('totalNetIncome').textContent = '₦' + annualNet.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('totalNetIncome').style.color = annualNet < 0 ? '#d32f2f' : '#388e3c';
+    }
+
+    function generateExpenseBreakdown(year, expenses) {
+        const categories = ['Feed', 'DOC', 'Medication', 'Vaccination', 'Utilities', 'Equipment', 'Transportation', 'Depreciation', 'Fueling', 'Electricity', 'Charcoal', 'Other'];
+        const quarters = [
+            { name: 'Q1', months: ['01', '02', '03'] },
+            { name: 'Q2', months: ['04', '05', '06'] },
+            { name: 'Q3', months: ['07', '08', '09'] },
+            { name: 'Q4', months: ['10', '11', '12'] }
+        ];
+
+        const tbody = document.getElementById('expenseBreakdownBody');
+        let html = '';
+
+        categories.forEach(cat => {
+            const catExpenses = expenses.filter(e => e.category === cat);
+            let rowTotal = 0;
+            let rowHtml = `<tr><td><strong>${cat}</strong></td>`;
+
+            quarters.forEach(q => {
+                const qExpenses = catExpenses.filter(e => {
+                    const month = e.date.substring(5, 7);
+                    return q.months.includes(month);
+                }).reduce((sum, e) => sum + e.amount, 0);
+                rowTotal += qExpenses;
+                rowHtml += `<td>₦${qExpenses.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>`;
+            });
+
+            rowHtml += `<td style="font-weight: bold;">₦${rowTotal.toLocaleString('en-US', {minimumFractionDigits: 2})}</td></tr>`;
+            html += rowHtml;
+        });
+
+        // Add total row
+        html += `<tr style="background: #e8f5e9; font-weight: bold;"><td>TOTAL EXPENSES</td>`;
+        let grandTotal = 0;
+        quarters.forEach(q => {
+            const qTotal = expenses.filter(e => {
+                const month = e.date.substring(5, 7);
+                return q.months.includes(month);
+            }).reduce((sum, e) => sum + e.amount, 0);
+            grandTotal += qTotal;
+            html += `<td>₦${qTotal.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>`;
+        });
+        html += `<td>₦${grandTotal.toLocaleString('en-US', {minimumFractionDigits: 2})}</td></tr>`;
+
+        tbody.innerHTML = html;
+    }
+
+    function generateTaxSummary(revenue, expenses, salaries, birdsSold, netProfit, yearSales) {
+        const totalDeductible = expenses + salaries;
+        const taxableIncome = Math.max(0, revenue - totalDeductible);
+        const estimatedTax = taxableIncome * 0.30; // 30% corporate tax rate
+
+        // Calculate total birds sold and weight sold for the year
+        const totalBirdsSoldCount = birdsSold;
+        const totalWeightSold = yearSales.reduce((sum, s) => sum + s.weight, 0);
+        const costPerBird = totalBirdsSoldCount > 0 ? (expenses + salaries) / totalBirdsSoldCount : 0;
+
+        document.getElementById('taxRevenue').textContent = '₦' + revenue.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('taxDeductible').textContent = '₦' + totalDeductible.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('taxableIncome').textContent = '₦' + taxableIncome.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('estimatedTax').textContent = '₦' + estimatedTax.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('taxBirdsSold').textContent = totalBirdsSoldCount.toLocaleString();
+        document.getElementById('taxWeightSold').textContent = Math.round(totalWeightSold).toLocaleString() + ' kg';
+        document.getElementById('taxCostPerBird').textContent = '₦' + costPerBird.toLocaleString('en-US', {minimumFractionDigits: 2});
+    }
+
+    function generateYearEndBalanceSheet(netProfit) {
+        // Calculate assets
+        const cashBalance = Math.max(0, netProfit);
+        const birdsInStock = db.batches.reduce((sum, b) => sum + getCurrentBirds(b.id), 0);
+        const livestockValue = birdsInStock * 2000; // Estimated value per bird
+        const feedStockValue = (db.feedStock['Super Starter'] + db.feedStock['Starter'] + db.feedStock['Finisher']) * 15000;
+        const currentAssets = cashBalance + livestockValue + feedStockValue;
+        const fixedAssets = 0; // Would need equipment depreciation data
+        const totalAssets = currentAssets + fixedAssets;
+
+        // Update asset values
+        document.getElementById('assetsCash').textContent = '₦' + cashBalance.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('assetsLivestock').textContent = '₦' + livestockValue.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('assetsFeed').textContent = '₦' + feedStockValue.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('assetsCurrent').textContent = '₦' + currentAssets.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('assetsFixed').textContent = '₦' + fixedAssets.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('assetsTotal').textContent = '₦' + totalAssets.toLocaleString('en-US', {minimumFractionDigits: 2});
+
+        // Liabilities (assuming no liabilities for simplicity)
+        const totalLiabilities = 0;
+        document.getElementById('liabilitiesCurrent').textContent = '₦0.00';
+        document.getElementById('liabilitiesTotal').textContent = '₦0.00';
+
+        // Equity
+        const retainedEarnings = netProfit;
+        const totalEquity = retainedEarnings;
+        document.getElementById('equityRetained').textContent = '₦' + retainedEarnings.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('equityTotal').textContent = '₦' + totalEquity.toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('liabilitiesEquityTotal').textContent = '₦' + (totalLiabilities + totalEquity).toLocaleString('en-US', {minimumFractionDigits: 2});
+    }
+
+    function exportYearEndReport() {
+    const year = document.getElementById('yearEndYear').value;
+    if (!year) {
+        alert('Please generate a report first before exporting');
+        return;
+    }
+
+    // Recalculate all values from database to ensure they match the display
+    const yearStart = `${year}-01-01`;
+    const yearEnd = `${year}-12-31`;
+
+    // Filter data for the selected year
+    const yearSales = db.sales.filter(s => s.date >= yearStart && s.date <= yearEnd);
+    const yearExpenses = db.expenses.filter(e => e.date >= yearStart && e.date <= yearEnd);
+    const yearSalaries = db.salaries.filter(s => s.date >= yearStart && s.date <= yearEnd);
+
+    // Calculate annual totals (same as display)
+    const totalRevenue = yearSales.reduce((sum, s) => sum + s.totalAmount, 0);
+    const totalExpenses = yearExpenses.reduce((sum, e) => sum + e.amount, 0);
+    const totalSalaries = yearSalaries.reduce((sum, s) => sum + s.amount, 0);
+    const totalFeedCost = yearExpenses.filter(e => e.category === 'Feed').reduce((sum, e) => sum + e.amount, 0);
+    const totalBirdsSold = yearSales.reduce((sum, s) => sum + s.quantity, 0);
+    const totalWeightSold = yearSales.reduce((sum, s) => sum + s.weight, 0);
+    const netProfit = totalRevenue - totalExpenses - totalSalaries;
+
+    // Tax calculations
+    const totalDeductible = totalExpenses + totalSalaries;
+    const taxableIncome = Math.max(0, totalRevenue - totalDeductible);
+    const estimatedTax = taxableIncome * 0.30;
+    const costPerBird = totalBirdsSold > 0 ? (totalExpenses + totalSalaries) / totalBirdsSold : 0;
+
+    // Build CSV content
+    let csv = `TRIPLE A FARMS & FEEDS NIGERIA LTD\nYEAR END FINANCIAL REPORT\nFinancial Year: ${year}\nGenerated: ${new Date().toLocaleString()}\n\n`;
+
+    // Annual Summary
+    csv += `ANNUAL SUMMARY\n`;
+    csv += `Description,Amount (₦)\n`;
+    csv += `Total Revenue,${totalRevenue.toFixed(2)}\n`;
+    csv += `Total Expenses,${totalExpenses.toFixed(2)}\n`;
+    csv += `Total Salaries,${totalSalaries.toFixed(2)}\n`;
+    csv += `Total Feed Cost,${totalFeedCost.toFixed(2)}\n`;
+    csv += `Total Birds Sold,${totalBirdsSold}\n`;
+    csv += `Total Weight Sold (kg),${Math.round(totalWeightSold)}\n`;
+    csv += `Net Profit/Loss,${netProfit.toFixed(2)}\n\n`;
+
+    // Tax Summary
+    csv += `TAX FILING SUMMARY\n`;
+    csv += `Description,Amount (₦)\n`;
+    csv += `Gross Revenue,${totalRevenue.toFixed(2)}\n`;
+    csv += `Deductible Expenses,${totalDeductible.toFixed(2)}\n`;
+    csv += `Taxable Income,${taxableIncome.toFixed(2)}\n`;
+    csv += `Estimated Tax (30%),${estimatedTax.toFixed(2)}\n`;
+    csv += `Total Birds Sold,${totalBirdsSold}\n`;
+    csv += `Total Weight Sold (kg),${Math.round(totalWeightSold)}\n`;
+    csv += `Average Cost per Bird,${costPerBird.toFixed(2)}\n\n`;
+
+    // Monthly Income Statement
+    csv += `MONTHLY INCOME STATEMENT\n`;
+    csv += `Month,Revenue (₦),COGS (₦),Gross Profit (₦),Operating Expenses (₦),Salaries (₦),Net Income (₦)\n`;
+    
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let annualRevenue = 0, annualCOGS = 0, annualGross = 0, annualOpEx = 0, annualSal = 0, annualNet = 0;
+
+    months.forEach((month, index) => {
+        const monthNum = String(index + 1).padStart(2, '0');
+        const monthStart = `${year}-${monthNum}-01`;
+        const monthEnd = new Date(year, index + 1, 0).toISOString().split('T')[0];
+
+        const monthSales = yearSales.filter(s => s.date >= monthStart && s.date <= monthEnd);
+        const monthExpenses = yearExpenses.filter(e => e.date >= monthStart && e.date <= monthEnd);
+        const monthSalaries = yearSalaries.filter(s => s.date >= monthStart && s.date <= monthEnd);
+
+        const revenue = monthSales.reduce((sum, s) => sum + s.totalAmount, 0);
+        const cogs = monthExpenses.filter(e => ['Feed', 'DOC', 'Medication', 'Vaccination'].includes(e.category)).reduce((sum, e) => sum + e.amount, 0);
+        const grossProfit = revenue - cogs;
+        const opEx = monthExpenses.filter(e => !['Feed', 'DOC', 'Medication', 'Vaccination'].includes(e.category)).reduce((sum, e) => sum + e.amount, 0);
+        const monthSal = monthSalaries.reduce((sum, s) => sum + s.amount, 0);
+        const netIncome = grossProfit - opEx - monthSal;
+
+        annualRevenue += revenue;
+        annualCOGS += cogs;
+        annualGross += grossProfit;
+        annualOpEx += opEx;
+        annualSal += monthSal;
+        annualNet += netIncome;
+
+        csv += `${month},${revenue.toFixed(2)},${cogs.toFixed(2)},${grossProfit.toFixed(2)},${opEx.toFixed(2)},${monthSal.toFixed(2)},${netIncome.toFixed(2)}\n`;
+    });
+
+    // Add annual totals
+    csv += `YEAR TOTAL,${annualRevenue.toFixed(2)},${annualCOGS.toFixed(2)},${annualGross.toFixed(2)},${annualOpEx.toFixed(2)},${annualSal.toFixed(2)},${annualNet.toFixed(2)}\n\n`;
+
+    // Expense Breakdown by Category
+    csv += `EXPENSE BREAKDOWN BY CATEGORY\n`;
+    csv += `Category,Q1 (₦),Q2 (₦),Q3 (₦),Q4 (₦),Annual Total (₦)\n`;
+    
+    const categories = ['Feed', 'DOC', 'Medication', 'Vaccination', 'Utilities', 'Equipment', 'Transportation', 'Depreciation', 'Fueling', 'Electricity', 'Charcoal', 'Other'];
+    const quarters = [
+        { months: ['01', '02', '03'] },
+        { months: ['04', '05', '06'] },
+        { months: ['07', '08', '09'] },
+        { months: ['10', '11', '12'] }
+    ];
+
+    categories.forEach(cat => {
+        const catExpenses = yearExpenses.filter(e => e.category === cat);
+        let rowTotal = 0;
+        let row = `${cat}`;
+        
+        quarters.forEach(q => {
+            const qExpenses = catExpenses.filter(e => {
+                const month = e.date.substring(5, 7);
+                return q.months.includes(month);
+            }).reduce((sum, e) => sum + e.amount, 0);
+            rowTotal += qExpenses;
+            row += `,${qExpenses.toFixed(2)}`;
+        });
+        
+        row += `,${rowTotal.toFixed(2)}\n`;
+        csv += row;
+    });
+
+    // Add expense grand total
+    let expenseTotal = 0;
+    let totalRow = `TOTAL EXPENSES`;
+    quarters.forEach(q => {
+        const qTotal = yearExpenses.filter(e => {
+            const month = e.date.substring(5, 7);
+            return q.months.includes(month);
+        }).reduce((sum, e) => sum + e.amount, 0);
+        expenseTotal += qTotal;
+        totalRow += `,${qTotal.toFixed(2)}`;
+    });
+    totalRow += `,${expenseTotal.toFixed(2)}\n`;
+    csv += totalRow;
+
+    downloadCSV(csv, `Year_End_Report_${year}.csv`);
+}
+
+    function printYearEndReport() {
+        window.print();
+    }
 
     </script>
 </body>
